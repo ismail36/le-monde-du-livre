@@ -1,0 +1,344 @@
+/* Body Font-Family */
+body {
+  font-family: sans-serif;
+}
+/* NavBar Style Codes (Logo - Search - Cart) */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #012839;
+  padding: 20px;
+}
+
+/* Logo Size */
+.logo img {
+  max-height: 70px;
+  margin-left: 10px;
+}
+
+/* searchBar Styles */
+.inputSearch {
+  padding: 12px 14px;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+  border: none;
+  width: 900px;
+}
+
+.btnSearch {
+  padding: 12px 14px;
+  border-radius: 0 10px 10px 0;
+  background-color: #dda74f;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* bntCart Styles */
+.cart {
+  margin-right: 10px;
+}
+.btnCart {
+  padding: 12px 14px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #dda74f;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cartNum {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+/* Responsive NavBar */
+/* Laptops */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+  .inputSearch {
+    width: 400px;
+  }
+}
+/* Tablets */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .inputSearch {
+    width: 300px;
+  }
+}
+/* Phones */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  /* NavBar Styles */
+  .container {
+    padding: 5px;
+  }
+  /* SearchBar */
+  .inputSearch {
+    width: 150px;
+    padding: 6px 5px;
+    font-size: 10px;
+  }
+  .btnSearch {
+    padding: 6px 5px;
+    font-size: 10px;
+  }
+  /* Cart Style Codes */
+  .btnCart {
+    padding: 6px 5px;
+    font-size: 10px;
+  }
+  .cartNum {
+    margin-left: 3px;
+    font-size: 11px;
+  }
+  .cart {
+    margin-right: 10px;
+  }
+  /* Logo */
+  .logo img {
+    margin-left: 0;
+    height: 50px;
+  }
+}
+
+/* Categories Style Codes */
+.categories {
+  display: flex;
+  justify-content: center;
+  background-color: #033950;
+}
+/* Categories Li Display */
+.listCategories ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px;
+}
+/* hover a (categories) */
+.listCategories > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  padding: 5px 8px;
+  border: 2px solid rgb(221, 167, 79, 0.5);
+}
+/* hover a (categories) */
+.listCategories > ul > li > a:hover {
+  background-color: #dda74f;
+  color: #033950;
+}
+/* Responsive Hamburger Menu */
+.categories label {
+  display: none;
+}
+#resCategories {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  .menuHamburger {
+    background-color: #033950;
+    padding: 15px;
+  }
+  .categories label {
+    display: block;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    padding: 15px;
+  }
+  .categories {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .listCategories ul li {
+    display: list-item;
+    margin-bottom: 20px;
+  }
+  .listCategories ul li a {
+    border: 0;
+    border-bottom: 2px solid #dda74f;
+    padding: 3px;
+    font-size: 14px;
+  }
+  .listCategories {
+    display: none;
+  }
+  #resCategories:checked + .listCategories {
+    display: block;
+  }
+}
+
+/* Main Slider Style Codes */
+.mainSlider img {
+  max-width: 100%;
+  height: 300px;
+  display: none;
+}
+.mainSlider .active img {
+  display: block;
+  animation: transition 0.5s ease;
+}
+@keyframes transition {
+  0% {
+    transition: 5s ease;
+    opacity: 0;
+  }
+}
+.mainSlider {
+  display: flex;
+  margin: auto;
+  width: 68%;
+  position: relative;
+}
+
+/* Main Slider Controllers Style Codes */
+.mainSlider .left-slide,
+.mainSlider .right-slide {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #012839;
+  color: #dda74f;
+  border: 2px solid #dda74f;
+  font-size: 23px;
+  top: 50%;
+  margin-top: -20px;
+}
+.mainSlider .left-slide {
+  left: -90px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.mainSlider .right-slide {
+  right: -90px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.mainSlider .left-slide:hover,
+.mainSlider .right-slide:hover {
+  background-color: #dda74f;
+  border: 2px solid #012839;
+  color: #012839;
+}
+
+/* Responsive Main Slider */
+/* Phones */
+@media screen and (min-width: 315px) and (max-width: 599px) {
+  .mainSlider img {
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+  }
+  .mainSlider {
+    width: 100%;
+  }
+  .mainSlider .left-slide {
+    left: 25px;
+  }
+  .mainSlider .right-slide {
+    right: 25px;
+  }
+}
+/* Slider Style Codes */
+.Slider-Container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 68%;
+  position: relative;
+}
+.Slider-Items {
+  display: flex;
+  justify-content: space-between;
+}
+.Slider-Product img {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  max-width: 170px;
+  max-height: 250px;
+  cursor: pointer;
+}
+.Slider-Product,
+.Slider-Product img {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.Slider-Product {
+  margin-top: 20px;
+  width: 195px;
+}
+
+.Slider-Product,
+.Slider-Product-Infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(241, 239, 239);
+  margin-bottom: 0px;
+}
+.Slider-Product-Infos {
+  height: 85px;
+}
+/* Button of the Add To Cart */
+.Slider-Product-Btn-AddToCart-Div {
+  width: 100%;
+  margin: 0;
+}
+.Slider-Btn-AddToCart {
+  background-color: #dda74f;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 100%;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+/* Book's name in slider */
+.Slider-Product-Name {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+/* Book's price */
+.Slider-Product-Price {
+  font-size: 18px;
+  color: red;
+  margin: 0 0 10px 0;
+}
+
+/* Main Slider Controllers Style Codes */
+.Slider-Container .Slider-left-slide,
+.Slider-Container .Slider-right-slide {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #012839;
+  color: #dda74f;
+  border: 2px solid #dda74f;
+  font-size: 23px;
+  top: 50%;
+  margin-top: -20px;
+}
+.Slider-Container .Slider-left-slide {
+  left: -90px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.Slider-Container .Slider-right-slide {
+  right: -90px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.Slider-Container .Slider-left-slide:hover,
+.Slider-Container .Slider-right-slide:hover {
+  background-color: #dda74f;
+  border: 2px solid #012839;
+  color: #012839;
+}

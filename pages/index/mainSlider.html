@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* Main Slider Style Codes */
+      .mainSlider img {
+        max-width: 100%;
+        height: 300px;
+        display: none;
+      }
+      .mainSlider .active img {
+        display: block;
+        animation: transition 0.5s ease;
+      }
+      @keyframes transition {
+        0% {
+          transition: 5s ease;
+          opacity: 0;
+        }
+      }
+      .mainSlider {
+        display: flex;
+        margin: auto;
+        width: 68%;
+        position: relative;
+      }
+
+      /* Main Slider Controllers Style Codes */
+      .mainSlider .left-slide,
+      .mainSlider .right-slide {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #012839;
+        color: #dda74f;
+        border: 2px solid #dda74f;
+        font-size: 23px;
+        top: 50%;
+        margin-top: -20px;
+      }
+      .mainSlider .left-slide {
+        left: -90px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+      }
+      .mainSlider .right-slide {
+        right: -90px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+      }
+      .mainSlider .left-slide:hover,
+      .mainSlider .right-slide:hover {
+        background-color: #dda74f;
+        border: 2px solid #012839;
+        color: #012839;
+      }
+
+      /* Responsive Main Slider */
+      /* Phones */
+      @media screen and (min-width: 315px) and (max-width: 599px) {
+        .mainSlider img {
+          margin: 0px;
+          width: 100%;
+          height: 150px;
+        }
+        .mainSlider {
+          width: 100%;
+        }
+        .mainSlider .left-slide {
+          left: 25px;
+        }
+        .mainSlider .right-slide {
+          right: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainSlider">
+      <div class="mainSlider-items">
+        <div class="mainSlider-item active">
+          <img src="../../assets/img/mainSlider/sliderIcin.png" alt="" />
+        </div>
+        <div class="mainSlider-item">
+          <img src="../../assets/img/mainSlider/sliderIcin.png" alt="" />
+        </div>
+        <div class="mainSlider-item">
+          <img src="../../assets/img/mainSlider/sliderIcin.png" alt="" />
+        </div>
+        <div class="mainSlider-item">
+          <img src="../../assets/img/mainSlider/sliderIcin.png" alt="" />
+        </div>
+      </div>
+      <!-- Main Slider Controllers -->
+      <div class="left-slide" onclick="next()">&lt;</div>
+      <div class="right-slide" onclick="next()">&gt;</div>
+    </div>
+
+    <script>
+      // For Main Slider Controllers
+      var slides = document.querySelector(".mainSlider-items").children;
+      var nextSlide = document.querySelector("right-slide");
+      var prevSlide = document.querySelector(".left-slide");
+      var totalSlides = slides.length;
+      var index = 0;
+      nextSlide.onClick = function () {
+        next("next");
+      };
+      prevSlide.onClick = function () {
+        next("prev");
+      };
+      function next(direction) {
+        if (direction == "next") {
+          index++;
+          if (index == totalSlides) {
+            index = 0;
+          }
+        } else {
+          if (index == 0) {
+            index = totalSlides - 1;
+          } else {
+            index--;
+          }
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+        slides[index].classList.add("active");
+      }
+    </script>
+  </body>
+</html>

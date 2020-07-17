@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-- NavBar (Logo - SearchBar - Cart) -->
+      <nav class="container">
+        <div class="logo">
+          <a href="http://lemondedulivre.fr"
+            ><img src="/assets/img/LeMondeDuLivre-Logo.png" alt=""
+          /></a>
+        </div>
+        <div class="searchBar">
+          <input
+            type="text"
+            class="inputSearch"
+            placeholder="What do you want to search"
+          />
+          <button class="btnSearch"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="cart">
+          <button class="btnCart">
+            <i class="fas fa-shopping-cart"></i><span class="cartNum"> 0</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Menu - Categories -->
+      <div class="categories">
+        <!-- Hamburger Icon For Responsive -->
+        <label for="resCategories"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="resCategories" />
+        <div class="listCategories">
+          <ul>
+            <li>
+              <a href="#">Manga</a>
+            </li>
+            <li>
+              <a href="#">Litterature</a>
+            </li>
+            <li>
+              <a href="#">Enfant</a>
+            </li>
+            <li>
+              <a href="#">Adult</a>
+            </li>
+            <li>
+              <a href="#">History</a>
+            </li>
+            <li>
+              <a href="#">Economie</a>
+            </li>
+            <li>
+              <a href="#">Sport</a>
+            </li>
+            <li>
+              <a href="#">Cuisine</a>
+            </li>
+            <li>
+              <a href="#">Polar</a>
+            </li>
+            <li>
+              <a href="#">Comic</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="mainSlider">
+        <div class="mainSlider-items">
+          <div class="mainSlider-item active">
+            <img src="assets/img/mainSlider/sliderIcin.png" alt="" />
+          </div>
+          <div class="mainSlider-item">
+            <img src="assets/img/mainSlider/sliderIcin.png" alt="" />
+          </div>
+          <div class="mainSlider-item">
+            <img src="assets/img/mainSlider/sliderIcin.png" alt="" />
+          </div>
+          <div class="mainSlider-item">
+            <img src="assets/img/mainSlider/sliderIcin.png" alt="" />
+          </div>
+        </div>
+        <!-- Main Slider Controllers -->
+        <div class="left-slide" onclick="next()">&lt;</div>
+        <div class="right-slide" onclick="next()">&gt;</div>
+      </div>
+      <div class="Slider-Container">
+        <div class="Slider-Items">
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/02.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Fabrika Ayari</h5>
+              <p class="Slider-Product-Price">18.50 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/06.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Hayvan Ciftligi</h5>
+              <p class="Slider-Product-Price">21.50 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/100.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Simyaci</h5>
+              <p class="Slider-Product-Price">18.50 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/102.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Kuyucakli Yusuf</h5>
+              <p class="Slider-Product-Price">23.50 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/06.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Fabrika Ayari</h5>
+              <p class="Slider-Product-Price">18.50 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+          <div class="Slider-Product">
+            <img
+              class="Slider-Product-Image"
+              src="../../assets/img/livres/105.jpg"
+              alt=""
+            />
+            <div class="Slider-Product-Infos">
+              <h5 class="Slider-Product-Name">Icimizdeki Seytan</h5>
+              <p class="Slider-Product-Price">5.90 €</p>
+            </div>
+            <div class="Slider-Product-Btn-AddToCart-Div">
+              <button class="Slider-Btn-AddToCart">
+                <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="Slider-left-slide" onclick="nextSlider()">&lt;</div>
+        <div class="Slider-right-slide" onclick="nextSlider()">&gt;</div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script
+      src="https://kit.fontawesome.com/579e37d848.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
