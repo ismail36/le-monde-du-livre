@@ -9,17 +9,19 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      /* Slider Style Codes */
-      .Slider-Container {
+      /* Categories Style Codes */
+      .Categories-Container {
         margin-left: auto;
         margin-right: auto;
-        width: 68%;
+        width: 90%;
       }
-      .Slider-Items {
+      .Categories-Items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
       }
-      .Slider-Product img {
+      .Categories-Product img {
         padding-left: 5px;
         padding-right: 5px;
         padding-top: 5px;
@@ -27,17 +29,17 @@
         max-height: 250px;
         cursor: pointer;
       }
-      .Slider-Product,
-      .Slider-Product img {
+      .Categories-Product,
+      .Categories-Product img {
         margin-top: 0;
         margin-bottom: 10px;
       }
-      .Slider-Product {
+      .Categories-Product {
         width: 195px;
+        margin-bottom: 30px !important;
       }
-
-      .Slider-Product,
-      .Slider-Product-Infos {
+      .Categories-Product,
+      .Categories-Product-Infos {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -45,15 +47,15 @@
         background-color: rgb(241, 239, 239);
         margin-bottom: 0px;
       }
-      .Slider-Product-Infos {
+      .Categories-Product-Infos {
         height: 85px;
       }
       /* Button of the Add To Cart */
-      .Slider-Product-Btn-AddToCart-Div {
+      .Categories-Product-Btn-AddToCart-Div {
         width: 100%;
         margin: 0;
       }
-      .Slider-Btn-AddToCart {
+      .Categories-Btn-AddToCart {
         background-color: #dda74f;
         padding-top: 7px;
         padding-bottom: 7px;
@@ -62,13 +64,13 @@
         margin: 0px;
         cursor: pointer;
       }
-      /* Book's name in slider */
-      .Slider-Product-Name {
+      /* Book's name in Categories */
+      .Categories-Product-Name {
         font-size: 20px;
         margin: 0 0 10px 0;
       }
       /* Book's price */
-      .Slider-Product-Price {
+      .Categories-Product-Price {
         font-size: 18px;
         color: red;
         margin: 0 0 10px 0;
@@ -77,100 +79,260 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="Slider-Container">
-      <div class="Slider-Items">
-        <div class="Slider-Product">
+    <div class="Categories-Container">
+      <div class="Categories-Items">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/02.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Fabrika Ayari</h5>
-            <p class="Slider-Product-Price">18.50 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Fabrika Ayari</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
         </div>
-        <div class="Slider-Product">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/06.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Hayvan Ciftligi</h5>
-            <p class="Slider-Product-Price">21.50 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Hayvan Ciftligi</h5>
+            <p class="Categories-Product-Price">21.50 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
         </div>
-        <div class="Slider-Product">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/100.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Simyaci</h5>
-            <p class="Slider-Product-Price">18.50 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Simyaci</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
         </div>
-        <div class="Slider-Product">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/102.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Kuyucakli Yusuf</h5>
-            <p class="Slider-Product-Price">23.50 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Kuyucakli Yusuf</h5>
+            <p class="Categories-Product-Price">23.50 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
         </div>
-        <div class="Slider-Product">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/06.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Fabrika Ayari</h5>
-            <p class="Slider-Product-Price">18.50 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Fabrika Ayari</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
         </div>
-        <div class="Slider-Product">
+        <div class="Categories-Product">
           <img
-            class="Slider-Product-Image"
+            class="Categories-Product-Image"
             src="../../assets/img/livres/105.jpg"
             alt=""
           />
-          <div class="Slider-Product-Infos">
-            <h5 class="Slider-Product-Name">Icimizdeki Seytan</h5>
-            <p class="Slider-Product-Price">5.90 €</p>
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
           </div>
-          <div class="Slider-Product-Btn-AddToCart-Div">
-            <button class="Slider-Btn-AddToCart">
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/05.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/105.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/02.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Fabrika Ayari</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/06.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Hayvan Ciftligi</h5>
+            <p class="Categories-Product-Price">21.50 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/100.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Simyaci</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/102.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Kuyucakli Yusuf</h5>
+            <p class="Categories-Product-Price">23.50 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/06.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Fabrika Ayari</h5>
+            <p class="Categories-Product-Price">18.50 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/105.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/05.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
+              <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
+            </button>
+          </div>
+        </div>
+        <div class="Categories-Product">
+          <img
+            class="Categories-Product-Image"
+            src="../../assets/img/livres/105.jpg"
+            alt=""
+          />
+          <div class="Categories-Product-Infos">
+            <h5 class="Categories-Product-Name">Icimizdeki Seytan</h5>
+            <p class="Categories-Product-Price">5.90 €</p>
+          </div>
+          <div class="Categories-Product-Btn-AddToCart-Div">
+            <button class="Categories-Btn-AddToCart">
               <i class="fas fa-shopping-cart"></i><span> ADD TO CART</span>
             </button>
           </div>
